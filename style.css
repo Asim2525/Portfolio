@@ -311,6 +311,76 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7;
 }
 
+/* My Projects Section */
+.projects-section {
+  padding: 100px 0;
+  background: var(--dark);
+  position: relative;
+}
+
+.projects-section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.project-card {
+  display: block;
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.project-card:hover h3 {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+
 /* Portfolio Section */
 .portfolio-section {
     padding: 100px 0;
